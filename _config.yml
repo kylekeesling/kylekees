@@ -1,3 +1,12 @@
 name: Kyle Keesling
+description: Stuff
+url: kyleke.es
+
+
+permalink: /:year/:month/:title
+paginate: 10
+
 markdown: redcarpet
+markdown_ext:  markdown,mkd,mkdn,md
+
 pygments: true
