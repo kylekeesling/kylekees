@@ -9,7 +9,7 @@ layout: default
         <h2 class="postTitle"><a href="{{ page.url }}">{{ page.title }}</a></h2>
     {% endif %}
 
-    <span class="postDate">{{ page.date | date: "%B, %-d %Y" }} - <a href="{{ page.url }}"><i class="fa fa-link"></i></a></span>
+    <span class="postDate">{{ page.date | date: "%B, %-d %Y" }} - <a href="{{ page.url }}" title="Permalink"><i class="fa fa-link"></i></a></span>
 
     <p>{{ content }}</p>
 
