@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Hello World"
-date:   2013-10-28 19:53:01
+date:   2013-10-28 21:20:00
 categories: hi
 ---
 
-It's mah blog.
+So here's my new site, not much to look at yet, but more to come soon. Enjoy!
