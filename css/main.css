@@ -15,11 +15,20 @@ html, body { height: 100%; }
 body {
   background-color: #fff;
   font: 18px 'Fenix', 'Georgia', serif !important;
+  margin: 0 0 21px 0;
+}
+
+blockquote {
+  font-style: italic;
 }
 
 a         { color: #000; }
 a:hover   { color: #00a; }
 a:visited { color: #000; }
+
+.header-link {
+  font-size: 12px;
+}
 
 .page-title {
   font-family: 'Futura', 'Trebuchet MS', Arial, sans-serif;
@@ -38,6 +47,10 @@ a:visited { color: #000; }
   margin-bottom: 18px;
 }
 
+.post-content {
+  margin: 8px 0 36px 0;
+}
+
 .post-footer {
   margin: 18px 0;
 }
@@ -50,5 +63,9 @@ a:visited { color: #000; }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Cabin', sans-serif;
   font-weight: 700;
+}
+
+footer {
+  padding-bottom: 18px;
 }
 
