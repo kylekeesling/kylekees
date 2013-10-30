@@ -5,7 +5,7 @@ layout: none
 <rss version="2.0">
     <channel>
         <title>{{ site.name }}</title>
-        <link>http://{{ site.url }}</link>
+        <link>{{ site.url }}</link>
         <description>
             {{ site.description }}
         </description>
@@ -17,15 +17,15 @@ layout: none
                     <guid isPermaLink="false">{{ post.link }}</guid>
                 {% else %}
                     <title>{{ post.title }}</title>
-                    <link>http://{{ site.url }}{{ post.url }}</link>
-                    <guid isPermaLink="true">http://{{ site.url }}{{ post.url }}</guid>
+                    <link>{{ site.url }}{{ post.url }}</link>
+                    <guid isPermaLink="true">{ site.url }}{{ post.url }}</guid>
                 {% endif %}
 
                 <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
                 <description>
                     {{ post.content | xml_escape }}
                     {% if post.link %}
-                        {% capture post_permalink %}<p><a href="http://{{ site.url }}{{ post.url }}">Permalink &#8734;</a></p>{% endcapture %}
+                        {% capture post_permalink %}<p><a href="{{ site.url }}{{ post.url }}">Permalink &#8734;</a></p>{% endcapture %}
                         {{ post_permalink | xml_escape }}
                     {% endif %}
                 </description>

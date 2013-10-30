@@ -12,6 +12,6 @@ categories: misc
 
 I know exactly what he's talking about, but about 5 months ago I went to a wedding in South Carolina and decided what the hell, and wore one. Ever since then I've grown fond of 'em, and actually bought one of Alton's. If you want want you can check em out at [hook+ALBERT][ha-link]. You'd better hurry though, it's a limited run and there's only one style left.
 
-<img src="/images/2013/10/alton-brown-bowtie.jpg" title="I Took the Mahattan... Bow Tie." class="img-block img-thumbnail">
+<img src="{{ site.url }}/images/2013/10/alton-brown-bowtie.jpg" title="I Took the Mahattan... Bow Tie." class="img-block img-thumbnail">
 
 [ha-link]: http://www.hookandalbert.com//Alton-Brown-Bow-Ties-By-CID312.aspx
