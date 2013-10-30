@@ -1,9 +1,9 @@
 ---
-layout: post
-title:  "Lenovo Hires Aston Kutcher as a Product Engineer"
-link: http://www.usatoday.com/story/tech/2013/10/29/ashton-kutcher-joins-lenovo-as-newest-product-engineer/3306987/
-source: USA Today
-date:   2013-10-30 11:05:00
+layout:     post
+title:      Lenovo Hires Aston Kutcher as a Product Engineer
+link:       http://www.usatoday.com/story/tech/2013/10/29/ashton-kutcher-joins-lenovo-as-newest-product-engineer/3306987/
+source:     USA Today
+date:       2013-10-30 11:05:00
 categories: news
 ---
 

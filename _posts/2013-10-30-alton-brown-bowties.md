@@ -1,9 +1,9 @@
 ---
-layout: post
-title:  Alton Brown Makes Bow Ties
-link: http://thedailysouth.southernliving.com/2013/10/29/alton-brown-makes-bow-ties/
-source: Southern Living
-date:   2013-10-30 11:55:00
+layout:     post
+title:      Alton Brown Makes Bow Ties
+link:       http://thedailysouth.southernliving.com/2013/10/29/alton-brown-makes-bow-ties/
+source:     Southern Living
+date:       2013-10-30 11:55:00
 categories: misc
 ---
 
