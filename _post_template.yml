@@ -1,8 +1,8 @@
 ---
 layout:     post
 title:
-# link:
-# source:
-date:       2013-10-30 11:55:00
+# link:     #used if linking the post out to another website
+# source:   #used for naming the source of your link
+date:       #remember your TE snippet 'jtime'
 categories:
 ---
