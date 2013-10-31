@@ -3,11 +3,11 @@ description: An Indianpolis-based Pixel Pusher
 url: http://kyleke.es
 timezone: America/Indianapolis
 
-
 permalink: /:year/:month/:title
+
 paginate: 10
+paginate_path: page:num
 
 markdown: redcarpet
 markdown_ext:  markdown,mkd,mkdn,md
-
 pygments: true

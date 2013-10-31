@@ -3,7 +3,7 @@ layout: default
 title: Kyle Keesling - An Indianapolis-based Pixel Pusher
 ---
 
-{% for post in site.posts %}
+{% for post in paginator.posts %}
 <div class="row">
   <div class="col-md-10 col-md-offset-1">
     {% if post.link %}
@@ -18,3 +18,20 @@ title: Kyle Keesling - An Indianapolis-based Pixel Pusher
   </div>
 </div>
 {% endfor %}
+
+<!-- Pagination links -->
+<div class="row paginator">
+  <div class="col-md-10 col-md-offset-1">
+    {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+        {% capture previous_page %}/{% endcapture %}
+      {% else %}
+        {% capture previous_page %}/page{{ paginator.previous_page }}{% endcapture %}
+      {% endif %}
+      <a href="{{ previous_page }}" class="btn btn-default previous">&larr; Newer Posts</a>
+    {% endif %}
+    {% if paginator.next_page %}
+      <a href="/page{{ paginator.next_page }}" class="btn btn-default next pull-right">Older Posts &rarr;</a>
+    {% endif %}
+  </div>
+</div>
