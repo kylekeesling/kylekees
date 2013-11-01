@@ -6,7 +6,7 @@ layout: default
   <div class="col-md-10 col-md-offset-1">
 
     {% if page.link %}
-      <h2 class="post-title"><a href="{{ page.link }}" title="">{{ page.title }}</a> <i class="fa fa-external-link header-link"></i></h2>
+      <h2 class="post-title"><a href="{{ page.link }}" title="{{ post.title }} - {{ post.source }}">{{ page.title }}</a> <i class="fa fa-external-link header-link"></i></h2>
     {% else %}
         <h2 class="post-title">{{ page.title }}</h2>
     {% endif %}
