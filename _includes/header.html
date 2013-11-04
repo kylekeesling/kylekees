@@ -12,14 +12,14 @@
       <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/icons/144.png">
 
       <meta property="og:site_name" content="kyleke.es" />
-      <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+      <meta property="og:url" content="{{ site.url }}" />
       <meta property="og:image" content="http://kyleke.es/images/icons/512.png" />
-      {% if post.url == "/"  %}
+      {% if page.url == "/index.html" %}
         <meta property="og:title" content="{{ site.name }}" />
         <meta property="og:description" content="{{ site.description }}" />
       {% else %}
         <meta property="og:title" content="{{ page.title }}" />
-        <meta property="og:description" content="{{ page.excerpt | escape }}" />
+        <meta property="og:description" content="{{ page.excerpt | strip_html }}" />
       {% endif %}
 
       <title>{{ page.title }}</title>
