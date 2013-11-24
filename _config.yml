@@ -8,6 +8,6 @@ permalink: /posts/:year/:month/:title
 paginate: 10
 paginate_path: page:num
 
-markdown: redcarpet
+markdown: kramdown #redcarpet
 markdown_ext:  markdown,mkd,mkdn,md
 pygments: true
