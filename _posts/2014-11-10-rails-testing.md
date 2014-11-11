@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Testing
+title:      Rails Testing
 # link:     #used if linking the post out to another website
 # source:   #used for naming the source of your link
 date:       2014-11-10 22:17:47
