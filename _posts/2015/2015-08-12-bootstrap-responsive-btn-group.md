@@ -7,7 +7,7 @@ date:       2015-08-12 17:28:01
 categories: bootstrap, css, sass
 ---
 
-Ever been disappointed/pissed off with how Bootstrap handles (read ignores) button formatting on smaller screens. Check this out:
+Ever been disappointed/pissed off with how Bootstrap handles (read ignores) button formatting on smaller screens? Check this out:
 
 {% gist b7d2571de44f2ad8f5cf %}
 
