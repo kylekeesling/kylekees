@@ -13,7 +13,7 @@ Whether you are a total Lynch fanatic, or know nothing about Twin Peaks, this is
 
 Either way I can't recommend you watch this enough. It gives you a lot of perspective as to what shaped some of the ideas/styles of some of today's best television shows.
 
-<img src="http://static.squarespace.com/static/52edbc9de4b0b870f5f7ed49/t/53ea60b8e4b01edbd0f20317/1407869121948/?format=750w" title="The Man for Another Place" class="img-block img-thumbnail">
+<img src="https://static.squarespace.com/static/52edbc9de4b0b870f5f7ed49/t/53ea60b8e4b01edbd0f20317/1407869121948/?format=750w" title="The Man for Another Place" class="img-block img-thumbnail">
 
 [esn]: http://esn.fm
 [link]: http://www.esn.fm/firetalk/
