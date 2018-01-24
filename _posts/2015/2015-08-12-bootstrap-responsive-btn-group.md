@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:    Boostrap 3 Responsive Button Groups
+title:    Bootstrap 3 Responsive Button Groups
 link:     https://gist.github.com/kylekeesling/b7d2571de44f2ad8f5cf
 # source:   #used for naming the source of your link
 date:       2015-08-12 17:28:01
