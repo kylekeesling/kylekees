@@ -12,7 +12,7 @@ Ever been disappointed/pissed off with how Bootstrap handles (read ignores) butt
 {% gist b7d2571de44f2ad8f5cf %}
 
 Makes this:
-<img src="images/2015/08/bs-btn-before.jpg" title="Before :(" class="img-block img-thumbnail">
+<img src="/images/2015/08/bs-btn-before.jpg" title="Before :(" class="img-block img-thumbnail">
 
 Look like this:
-<img src="images/2015/08/bs-btn-after.jpg" title="After!" class="img-block img-thumbnail">
+<img src="/images/2015/08/bs-btn-after.jpg" title="After!" class="img-block img-thumbnail">
