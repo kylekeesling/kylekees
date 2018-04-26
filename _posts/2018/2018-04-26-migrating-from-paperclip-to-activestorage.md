@@ -38,7 +38,7 @@ To get around this we just need to utilize the actual asset URL in our rake task
 
 This rake task is pretty straightforward, but what got a little sticky was dealing with filename extensions, mainly the fact that sometimes uploaded files don't have them, so that's what lines 5 & 6 are about.
 
-### A Few Considations
+### A Few Considerations
 
 There are a few tradeoffs that you'll have to consider if you use this method though.
 
