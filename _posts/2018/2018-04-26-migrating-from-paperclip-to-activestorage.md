@@ -9,4 +9,4 @@ categories: ruby, rails, activestorage, paperclip
 
 With the release of Rails 5.2 there is now a native, built in way to handle asset uploads and management called ActiveStorage
 
-{% gist 87231b253ab15b0ea99f65f755ebd576#file-organization-rb %}
+{% gist 87231b253ab15b0ea99f65f755ebd576 %}
