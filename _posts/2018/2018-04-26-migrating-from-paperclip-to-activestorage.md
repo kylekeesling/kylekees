@@ -7,7 +7,7 @@ date:       2018-04-26 08:00:00
 categories: ruby, rails, activestorage, paperclip
 ---
 
-With the release of Rails 5.2 there is now a native, built in way to handle asset uploads and management called [ActiveStorage][activestorage]. making the need to use gems like [Paperclip][paperclip], [Carrierwave][carrierwave], or Fog[fog], with Paperclip going so far as writing a [migration guide][paperclip-migrate-issue]; implying that it may not be long for this world.
+With the release of Rails 5.2 there is now a native, built in way to handle asset uploads and management called [ActiveStorage][activestorage], making the need to use gems like [Paperclip][paperclip], [Carrierwave][carrierwave], or [Fog][fog], with Paperclip going so far as writing a [migration guide][paperclip-migrate-issue]; implying that it may not be long for this world.
 
 To be honest I didn't even know that Paperclip had written a [migration guide][paperclip-migrating] until I started writing this post, and while it's fairly comprehensive, it doesn't do what in my mind is one of the most important tasks - migrating the files on the remote host.
 
@@ -28,7 +28,7 @@ This scenario is surprisingly easier due and the fact that we don't have to worr
 Just remember to leave your Paperclip declarations on your model until after you run your rake task.
 
 ### Moving an Asset As-is
-In reality, you'll likely want to keep the same name, which requires us to get a little more crafty. In my case I have an `Organization` class with a logo. We wanted to keep using that term, but in order to do so, we have to remove the Paperclip declarations from the model, otherwise would couldn't refer to all the new ActiveStorage goodness.
+In reality, you'll likely want to keep the same name, which requires us to get a little more crafty. In my case I have an `Organization` class with a `logo`. We wanted to keep using that term, but in order to do so, we have to remove the Paperclip declarations from the model, otherwise would couldn't refer to all the new ActiveStorage goodness.
 
 {% gist 87231b253ab15b0ea99f65f755ebd576 organization.rb %}
 
