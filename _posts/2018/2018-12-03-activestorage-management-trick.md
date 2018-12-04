@@ -16,7 +16,7 @@ I have stumbled upon a couple of different takes on how to potentially do this, 
 
 ### The Approach
 
-Since all attachments are saved as the same object/models types, [Attachment](https://api.rubyonrails.org/classes/ActiveStorage/Attachment.html) and [Blob](https://api.rubyonrails.org/classes/ActiveStorage/Blob.html)), we can use a common controller to interact and modify with them, regardless of the parent record that it belongs to.
+Since all attachments are saved as the same object/models types, [Attachment](https://api.rubyonrails.org/classes/ActiveStorage/Attachment.html) and [Blob](https://api.rubyonrails.org/classes/ActiveStorage/Blob.html), we can use a common controller to interact and modify with them, regardless of the parent record that it belongs to.
 
 In my case I chose to stick closely to the naming conventions already given to us, so I created a new controller named `ActiveStorage::AttachmentsController`, and since for now I'm only worried about deleting attachments, we only need one method, `delete`.
 
@@ -58,7 +58,7 @@ scope :active_storage, module: :active_storage, as: :active_storage do
   end
 ```
 
-It's also important to update the user interface to remove any reference to the attachment, and in my case I used Rails UJS. The javascript necessary to remove the element from my UI is simple and straightforward:
+It's also important to update the user interface to remove any reference to the attachment, and in this case I used Rails UJS. The javascript necessary to remove the element from my UI is simple and straightforward:
 
 ```javascript
 // app/views/active_storage/attachments/destroy.js.erb
@@ -66,6 +66,15 @@ document.getElementById("<%= dom_id @attachment %>").remove()
 ```
 
 The only assumptions made here are that you had the representation of your attachment wrapped in a div with ID of `attachment_#{id}`, which you can easily render using Rails handy `dom_id` method.
+
+you can now use the following markup next all of your attachments to allow for easy deletion:
+
+'''ruby
+link_to "Delete", active_storage_attachment_path(attachment), 
+         method: :delete, remote: :true,
+         data: { confirm: "Are you sure you want to delete this?" }
+'''
+
 
 ### Wrapping it Up
 This approach is relatively simple, and relies heavily on the tools and features that Rails provides to us.
