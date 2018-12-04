@@ -67,13 +67,13 @@ document.getElementById("<%= dom_id @attachment %>").remove()
 
 The only assumptions made here are that you had the representation of your attachment wrapped in a div with ID of `attachment_#{id}`, which you can easily render using Rails handy `dom_id` method.
 
-you can now use the following markup next all of your attachments to allow for easy deletion:
+You can now use the following markup next all of your attachments to allow for easy deletion:
 
-'''ruby
+```ruby
 link_to "Delete", active_storage_attachment_path(attachment), 
          method: :delete, remote: :true,
-         data: { confirm: "Are you sure you want to delete this?" }
-'''
+         data: { confirm: "Are you sure you wanna this?" }
+```
 
 
 ### Wrapping it Up
