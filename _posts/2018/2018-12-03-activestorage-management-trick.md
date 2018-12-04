@@ -1,6 +1,6 @@
 ---
 layout:   post
-title:    An Easier Way to Accommodate Deletion of ActiveStorage Records
+title:    An Easier Way to Accommodate Deletion of ActiveStorage Attachments
 date:       2018-12-03 22:45:00
 categories: ruby, rails, activestorage
 ---
