@@ -15,7 +15,7 @@ With that in mind I've used the following rake tasks with great success to move 
 
 There are two flavors here, migrating assets while changing their name, or just plain old moving.
 
-### Moving an Asset While Changing Its Name
+## Moving an Asset While Changing Its Name
 
 In my case I had a `User` class with a Paperclip attachment called `headshot`. I never really liked that we used the term headshot, so this was the perfect opportunity to change it to `avatar`.
 
@@ -27,7 +27,7 @@ This scenario is surprisingly easier due and the fact that we don't have to worr
 
 Just remember to leave your Paperclip declarations on your model until after you run your rake task.
 
-### Moving an Asset As-is
+## Moving an Asset As-is
 In reality, you'll likely want to keep the same name, which requires us to get a little more crafty. In my case I have an `Organization` class with a `logo`. We wanted to keep using that term, but in order to do so, we have to remove the Paperclip declarations from the model, otherwise would couldn't refer to all the new ActiveStorage goodness.
 
 {% gist 87231b253ab15b0ea99f65f755ebd576 organization.rb %}
@@ -38,7 +38,7 @@ To get around this we just need to utilize the actual asset URL in our rake task
 
 This rake task is pretty straightforward, but what got a little sticky was dealing with filename extensions, mainly the fact that sometimes uploaded files don't have them, so that's what lines 5 & 6 are about.
 
-### A Few Considerations
+## A Few Considerations
 
 There are a few tradeoffs that you'll have to consider if you use this method though.
 

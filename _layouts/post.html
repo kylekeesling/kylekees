@@ -2,26 +2,16 @@
 layout: default
 ---
 
-<div class="row">
-  <div class="col-md-10 col-md-offset-1">
+{% if page.link %}
+  <h1 class="post-title"><a href="{{ page.link }}" title="{{ page.title }} - {{ page.source }}">{{ page.title }}</a> <i class="fa fa-external-link header-link"></i></h1>
+{% else %}
+    <h1 class="post-title">{{ page.title }}</h1>
+{% endif %}
 
-    {% if page.link %}
-      <h2 class="post-title"><a href="{{ page.link }}" title="{{ page.title }} - {{ page.source }}">{{ page.title }}</a> <i class="fa fa-external-link header-link"></i></h2>
-    {% else %}
-        <h2 class="post-title">{{ page.title }}</h2>
-    {% endif %}
+<div class="font-thin pt-1">
+  <em>{{ page.date | date: "%B, %-d %Y" }} - <a href="{{ page.url }}" title="Permalink"><i class="fa fa-link"></i></a></em>
+</div>
 
-    <div class="post-date">
-      {{ page.date | date: "%B, %-d %Y" }} - <a href="{{ page.url }}" title="Permalink"><i class="fa fa-link"></i></a>
-    </div>
-
-    <div class="post-content">
-      {{ content }}
-
-      <div class="post-footer">
-        <a href="/"><i>&larr; Go Back</i></a>
-      </div>
-    </div>
-
-  </div>
+<div class="my-5">
+  {{ content }}
 </div>

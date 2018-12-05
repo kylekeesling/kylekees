@@ -5,34 +5,34 @@ title: Kyle Keesling - An Indianapolis-based Pixel Pusher
 ---
 
 {% for post in paginator.posts %}
-<div class="row">
-  <div class="col-md-10 col-md-offset-1">
-    {% if post.link %}
-      <h2 class="post-title"><a href="{{ post.link }}" title="{{ post.title }} - {{ post.source }}">{{ post.title }}</a> <i class="fa fa-external-link header-link"></i></h2>
-    {% else %}
-        <h2 class="post-title"><a href="{{ post.url }}" title="Permalink to '{{ post.title }}'">{{ post.title }}</a></h2>
-    {% endif %}
-    <span class="post-date">{{ post.date | date: "%B, %-d %Y" }} - <a href="{{ post.url }}" title="Permalink"><i class="fa fa-link"></i></a></span>
-    <div class="post-content">
+  <div class="mx-25">
+    <h1>
+      {% if post.link %}
+        <a href="{{ post.link }}" class="no-underline" title="{{ post.title }} - {{ post.source }}">{{ post.title }}</a> <i class="fa fa-external-link text-sm"></i>
+      {% else %}
+        <a href="{{ post.url }}" class="no-underline" title="Permalink to '{{ post.title }}'">{{ post.title }}</a>
+      {% endif %}
+    </h1>
+    <div class="font-thin pt-1">
+      <em>{{ post.date | date: "%B, %-d %Y" }} - <a href="{{ post.url }}" title="Permalink"><i class="fa fa-link"></i></a></em>
+    </div>
+    <div class="my-5">
       {{ post.content }}
     </div>
   </div>
-</div>
 {% endfor %}
 
 <!-- Pagination links -->
-<div class="row paginator">
-  <div class="col-md-10 col-md-offset-1">
-    {% if paginator.previous_page %}
-      {% if paginator.previous_page == 1 %}
-        {% capture previous_page %}/{% endcapture %}
-      {% else %}
-        {% capture previous_page %}/page{{ paginator.previous_page }}{% endcapture %}
-      {% endif %}
-      <a href="{{ previous_page }}" class="btn btn-default previous">&larr; Newer Posts</a>
+<div class="mt-8 clearfix bottom-links">
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+      {% capture previous_page %}/{% endcapture %}
+    {% else %}
+      {% capture previous_page %}/page{{ paginator.previous_page }}{% endcapture %}
     {% endif %}
-    {% if paginator.next_page %}
-      <a href="/page{{ paginator.next_page }}" class="btn btn-default next pull-right">Older Posts &rarr;</a>
-    {% endif %}
-  </div>
+    <a href="{{ previous_page }}" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">&larr; Newer Posts</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="/page{{ paginator.next_page }}" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded float-right">Older Posts &rarr;</a>
+  {% endif %}
 </div>

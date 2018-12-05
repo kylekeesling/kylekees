@@ -5,7 +5,7 @@ date:       2018-12-03 22:45:00
 categories: ruby, rails, activestorage
 ---
 
-### A Little Background
+## A Little Background
 
 As I continue to phase out [Paperclip](https://github.com/thoughtbot/paperclip) in favor of [ActiveStorage](https://edgeguides.rubyonrails.org/active_storage_overview.html), I've wanted to keep the methods I used to manage these assets as succinct
 and reusable as possible.
@@ -14,7 +14,7 @@ ActiveStorage gives us a dead simple way to save and update assets, but the abil
 
 I have stumbled upon a couple of different takes on how to potentially do this, but I've not been satisfied with their approaches. Many do not take into account authorization and permissions, which if you're not careful, allows any user to delete any attachment they choose just by randomly hitting URLs in your application. With that in mind I set out to try and roll my own.
 
-### The Approach
+## The Approach
 
 Since all attachments are saved as the same object/models types, [Attachment](https://api.rubyonrails.org/classes/ActiveStorage/Attachment.html) and [Blob](https://api.rubyonrails.org/classes/ActiveStorage/Blob.html), we can use a common controller to interact and modify with them, regardless of the parent record that it belongs to.
 
@@ -54,8 +54,8 @@ Also be sure to wire this new controller up in your routes:
 ```ruby
 # config/routes.rb
 scope :active_storage, module: :active_storage, as: :active_storage do
-    resources :attachments, only: [:destroy]
-  end
+  resources :attachments, only: [:destroy]
+end
 ```
 
 It's also important to update the user interface to remove any reference to the attachment, and in this case I used Rails UJS. The javascript necessary to remove the element from my UI is simple and straightforward:
@@ -70,13 +70,13 @@ The only assumptions made here are that you had the representation of your attac
 You can now use the following markup next all of your attachments to allow for easy deletion:
 
 ```ruby
-link_to "Delete", active_storage_attachment_path(attachment), 
+link_to "Delete", active_storage_attachment_path(attachment),
          method: :delete, remote: :true,
          data: { confirm: "Are you sure you wanna this?" }
 ```
 
 
-### Wrapping it Up
+## Wrapping it Up
 This approach is relatively simple, and relies heavily on the tools and features that Rails provides to us.
 
 In my case I'm also leveraging a common partial to render thumbnails, metadata, and links for attachments, making it dead simple to add attachments to any model I choose to in the future.

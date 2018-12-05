@@ -1,7 +1,0 @@
-{% if include.param.link %}
-  <h2 class="postTitle"><a href="{{ include.param.link }}">{{ include.param.title }}</a> <i class="fa fa-external-link"></i></h2>
-{% else %}
-    <h2 class="postTitle"><a href="{{ include.param.url }}">{{ include.param.title }}</a></h2>
-{% endif %}
-
-<span class="postDate">{{ include.param.date | date: "%B, %-d %Y" }} - <a href="{{ include.param.url }}"><i class="fa fa-link"></i></a></span>
