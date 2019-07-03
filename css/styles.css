@@ -6189,25 +6189,16 @@ p {
 }
 
 a {
-  color: #22292f;
+  color: #2779bd;
   text-decoration: none;
 }
 
 a:visited {
-  color: #22292f;
-}
-
-.bottom-links > a,
-.bottom-links > a:visited {
-  color: #fff;
-}
-
-.bottom-links > a:hover {
-  color: #b8c2cc;
+  color: #2779bd;
 }
 
 a:hover {
-  color: #2779bd;
+  text-decoration: underline;
 }
 
 div.highlighter-rouge {
