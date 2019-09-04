@@ -42,16 +42,18 @@ create a collapsable post. In the sample above notice the little black right arr
 if you click it you can even get a little sample of the stacktrace. Here's the value
 of the `contents` key I used for the chatbot payload:
 
-```html
-  <details>
-    <summary>
-      <strong>💥({xxx__fault__id}){xxx__message}</strong><br>
-      <a href="{xxx__fault__url}">View in Honeybadger</a>
-    </summary>
-    <br><hr><br>
-    <pre>{xxx__notice__application_trace}</pre>
-  </details>
-```
+<div class="overflow-x-scroll">
+  {% highlight html %}
+    <details>
+      <summary>
+        <strong>💥({xxx__fault__id}){xxx__message}</strong><br>
+        <a href="{xxx__fault__url}">View in Honeybadger</a>
+      </summary>
+      <br><hr><br>
+      <pre>{xxx__notice__application_trace}</pre>
+    </details>
+  {% endhighlight %}
+</div>
 
 And here's a preview of what the expanded preview looks like:
 

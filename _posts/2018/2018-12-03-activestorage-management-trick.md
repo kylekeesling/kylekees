@@ -26,54 +26,63 @@ I also want to make sure that the user has the permissions to modify these attac
 
 The `purge_later` call will take care of the actual file deletion in your background queue, and will delete the corresponding `Blob` record.
 
-```ruby
-# app/controllers/active_storage/attachments_controller.rb
-class ActiveStorage::AttachmentsController < ApplicationController
-  before_action :authenticate_user!
-  before_action :set_attachment, :authorize_attachment_parent!
+<div class="overflow-x-scroll">
+  {% highlight ruby %}
+    # app/controllers/active_storage/attachments_controller.rb
+    class ActiveStorage::AttachmentsController < ApplicationController
+      before_action :authenticate_user!
+      before_action :set_attachment, :authorize_attachment_parent!
 
-  def destroy
-    @attachment.purge_later
-  end
+      def destroy
+        @attachment.purge_later
+      end
 
-  private
+      private
 
-    def set_attachment
-      @attachment = ActiveStorage::Attachment.find(params[:id])
-      @record = @attachment.record
+        def set_attachment
+          @attachment = ActiveStorage::Attachment.find(params[:id])
+          @record = @attachment.record
+        end
+
+        def authorize_attachment_parent!
+          authorize! :manage, @record
+        end
     end
-
-    def authorize_attachment_parent!
-      authorize! :manage, @record
-    end
-end
-```
+  {% endhighlight %}
+</div>
 
 Also be sure to wire this new controller up in your routes:
 
-```ruby
-# config/routes.rb
-scope :active_storage, module: :active_storage, as: :active_storage do
-  resources :attachments, only: [:destroy]
-end
-```
+<div class="overflow-x-scroll">
+  {% highlight ruby %}
+    # config/routes.rb
+    scope :active_storage, module: :active_storage, as: :active_storage do
+      resources :attachments, only: [:destroy]
+    end
+  {% endhighlight %}
+</div>
+
 
 It's also important to update the user interface to remove any reference to the attachment, and in this case I used Rails UJS. The javascript necessary to remove the element from my UI is simple and straightforward:
 
-```javascript
-// app/views/active_storage/attachments/destroy.js.erb
-document.getElementById("<%= dom_id @attachment %>").remove()
-```
+<div class="overflow-x-scroll">
+  {% highlight javascript %}
+    // app/views/active_storage/attachments/destroy.js.erb
+    document.getElementById("<%= dom_id @attachment %>").remove()
+  {% endhighlight %}
+</div>
 
 The only assumptions made here are that you had the representation of your attachment wrapped in a div with ID of `attachment_#{id}`, which you can easily render using Rails handy `dom_id` method.
 
 You can now use the following markup next all of your attachments to allow for easy deletion:
 
-```ruby
-link_to "Delete", active_storage_attachment_path(attachment),
-         method: :delete, remote: :true,
-         data: { confirm: "Are you sure you wanna this?" }
-```
+<div class="overflow-x-scroll">
+  {% highlight ruby %}
+    link_to "Delete", active_storage_attachment_path(attachment),
+             method: :delete, remote: :true,
+             data: { confirm: "Are you sure you wanna this?" }
+  {% endhighlight %}
+ </div>
 
 
 ## Wrapping it Up
