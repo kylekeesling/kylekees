@@ -5,6 +5,9 @@ date:       2019-09-04 09:00:00
 categories: honeybadger, zapier, webhooks, sms
 ---
 
+*UPDATE: Shortly after posting this Honeybadger was [kind enough to let me know](https://twitter.com/honeybadgerapp/status/1169684671556308992)
+that [this is functionality that they offer directly](https://docs.honeybadger.io/guides/profile.html#configuring-personal-alerts)* 😁
+
 After using [Honeybadger](https://www.honeybadger.io/) Uptime Monitoring for a
 few months, I found that these updates were sometimes getting lost in the
 everyday chatter of my [error messages that I have posted to a Basecamp chat](/posts/2019/07/honeybadger-to-basecamp)
