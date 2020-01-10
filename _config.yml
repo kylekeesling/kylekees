@@ -1,7 +1,7 @@
 name: Kyle Keesling
 description: An Indianpolis-based Pixel Pusher
 title: Kyle Keesling - An Indianpolis-based Pixel Pusher
-url: http://kyleke.es
+url: http://kylekeesling.dev
 timezone: America/Indianapolis
 
 permalink: /posts/:year/:month/:title
@@ -12,3 +12,5 @@ paginate_path: page:num
 markdown: kramdown #redcarpet
 markdown_ext:  markdown,mkd,mkdn,md
 highlighter: rouge
+
+include: [".well-known"]
