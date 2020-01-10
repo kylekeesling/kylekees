@@ -13,6 +13,4 @@ markdown: kramdown #redcarpet
 markdown_ext:  markdown,mkd,mkdn,md
 highlighter: rouge
 
-include:
-  -".nojekyll"
-  -".well-known"
+include: [".well-known"]
