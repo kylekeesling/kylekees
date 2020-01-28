@@ -397,6 +397,14 @@ pre {
   margin: 0;
 }
 
+blockquote {
+  padding: 6px 12px;
+  margin: 6px 0;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  font-style: italic;
+}
+
 button {
   background: transparent;
   padding: 0;
