@@ -37,13 +37,17 @@ Once you have your IAM user created you can use the policy template I've built d
       "Action": [
           "s3:PutObject",
           "s3:GetObject",
-          "s3:ListBucket",
           "s3:DeleteObject"
       ],
       "Resource": [
-          "arn:aws:s3:::*/*",
-          "arn:aws:s3:::NAME_OF_YOUR_BUCKET_GOES_HERE"
+          "arn:aws:s3:::BUCKET_NAME_GOES_HERE/*"
       ]
+    },
+    {
+      "Sid": "VisualEditor1",
+      "Effect": "Allow",
+      "Action": "s3:ListBucket",
+      "Resource": "arn:aws:s3:::BUCKET_NAME_GOES_HERE"
     }
   ]
 }
