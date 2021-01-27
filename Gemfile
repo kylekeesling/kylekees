@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 source "https://rubygems.org"
-ruby "2.6.5"
+ruby File.read(".ruby-version").strip
 
 group :jekyll_plugins do
   gem "github-pages"
