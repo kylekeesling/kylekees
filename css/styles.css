@@ -6209,7 +6209,7 @@ a:hover {
   text-decoration: underline;
 }
 
-a.header-link\:visited {
+a.header-link:visited {
   color: white !important;
 }
 
