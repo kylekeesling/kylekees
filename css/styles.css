@@ -68,7 +68,7 @@ hr {
 pre {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
-  overflow: scroll;
+  overflow: scroll !important;
 }
 
 /* Text-level semantics
@@ -396,6 +396,7 @@ figure,
 p,
 pre {
   margin: 0;
+  overflow: scroll !important;
 }
 
 blockquote {
